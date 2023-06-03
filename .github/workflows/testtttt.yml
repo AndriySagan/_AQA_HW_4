@@ -5,6 +5,7 @@ name: Manual workflow1 (ТЕСТовий 1)
 # Controls when the action will run. Workflow runs when manually triggered using the UI (Керує, коли буде запущено дію. Робочий процес працює, коли вручну запускається за допомогою інтерфейсу користувача)
 # or API.
 on:
+  push:
   workflow_dispatch:
     # Inputs the workflow accepts (Введення робочого процесу приймає).
     inputs:
