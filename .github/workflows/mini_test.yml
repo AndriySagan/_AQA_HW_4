@@ -1,0 +1,32 @@
+name: мій другий міні тест сайпреса та гіт хаба
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install and run Cypress tests
+        run: |
+          npm ci
+          npx cypress run --spec "e2e/**/*.spec.js"
+      - name: Cypress run
+        uses: cypress-io/github-action@v5
+        with:
+          start: npm start
+      - name: Create videos directory
+        run: mkdir -p cypress/videos
+      - name: Save Cypress videos on failure
+        if: ${{ failure() }}
+        run: |
+          mkdir -p videos
+          mv cypress/videos/*.mp4 videos/
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: Cypress Videos
+          path: cypress/videos
