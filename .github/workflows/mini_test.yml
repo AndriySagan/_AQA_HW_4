@@ -13,7 +13,9 @@ jobs:
       - name: Install and run Cypress tests
         run: |
           npm ci
-          npx cypress run --spec "e2e/**/*.spec.js"
+
+          npx cypress run --spec "e2e/modul_4_hw.cy.js"
+        #   npx cypress run --spec "e2e/**/*.spec.js"
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
