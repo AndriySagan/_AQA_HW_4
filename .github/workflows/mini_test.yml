@@ -14,7 +14,7 @@ jobs:
         run: |
           npm ci
 
-          npx cypress run --spec "e2e/modul_4_hw.cy.js"
+          npx cypress run --spec "cypress\e2e\testovi_zaputu.spec.cy.js"
         #   npx cypress run --spec "e2e/**/*.spec.js"
       - name: Cypress run
         uses: cypress-io/github-action@v5
