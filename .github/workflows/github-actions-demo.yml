@@ -16,7 +16,7 @@ jobs:
     # Виконувати це завдання на сервері з останньою версією Ubuntu
 
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event.(Це завдання було виконано автоматично при події ${{ github.event_name }})"
         # Виконати команду "echo" для виведення повідомлення, яке показує, що задача була автоматично спровокована подією з іменем ${{ github.event_name }}
 
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
@@ -42,3 +42,4 @@ jobs:
 
       - run: echo "🍏 This job's status is ${{ job.status }}."
         # Вивести статус завдання
+  cypress-run:
