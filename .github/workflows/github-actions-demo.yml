@@ -1,7 +1,7 @@
-name: GitHub Actions Demo
+name: GitHub Actions Demo (назва яку я бачу)
 # Назва цього GitHub Actions, який проводить демонстрацію
 
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀(${{ github.actor }} тестує дії GitHub методом пуш)
 # Ім'я користувача GitHub, який виконує тестування GitHub Actions
 
 on: [push]
@@ -45,7 +45,7 @@ jobs:
   cypress-run:
     runs-on: ubuntu-22.04
     steps:
-      - name: Checkout
+      - name: Checkout (Тут додаю свої налаштування, поки щось не виходить)
         uses: actions/checkout@v3
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
