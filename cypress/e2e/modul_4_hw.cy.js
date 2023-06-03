@@ -19,7 +19,7 @@ describe("#1 Запит методом POST на сайт https://reqres.in/ ", 
       const createdAt = response.body.createdAt; // Отримання createdAt з відповіді
       cy.log("id", id);
       cy.log("createdAt", createdAt);
-      assert.isTrue(response.duration <= 1000); // Перевірка тривалості виконання запиту
+      assert.isTrue(response.duration <= 1000); // Перевірка тривалості виконання запиту.
     });
   });
 });
