@@ -54,16 +54,16 @@ jobs:
         with:
           # build: npm run build
           start: npm start
-      - name: Create videos directory
+      - name: Create videos directory (Створюємо папку для збереження відео)
         run: mkdir -p cypress/videos
         # Створюємо папку для збереження відео (на випадок якщо її не існує)
-      - name: Save Cypress videos on failure
+      - name: Save Cypress videos on failure (Збереження відео для непройдених тестів)
         if: ${{ failure() }}
         run: |
           mkdir -p videos
           mv cypress/videos/*.mp4 videos/
         # Команда для збереження відео з помилками у вказану папку
-      - name: Upload Artifacts
+      - name: Upload Artifacts (завантаження артефактів з папки cypress/videos)
         uses: actions/upload-artifact@v2
         with:
           name: Cypress Videos
