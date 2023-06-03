@@ -1,0 +1,3 @@
+# Ignore videos (ігнорування відео файлів)
+cypress/videos/
+videos/
