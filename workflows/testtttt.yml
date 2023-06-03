@@ -1,32 +1,32 @@
-# This is a basic workflow that is manually triggered()
+# This is a basic workflow that is manually triggered(Це базовий робочий процес, який запускається вручну)
 
 name: Manual workflow (ТЕСТовий 1)
 
-# Controls when the action will run. Workflow runs when manually triggered using the UI
+# Controls when the action will run. Workflow runs when manually triggered using the UI (Керує, коли буде запущено дію. Робочий процес працює, коли вручну запускається за допомогою інтерфейсу користувача)
 # or API.
 on:
   workflow_dispatch:
-    # Inputs the workflow accepts.
+    # Inputs the workflow accepts (Введення робочого процесу приймає).
     inputs:
       name:
-        # Friendly description to be shown in the UI instead of 'name'
+        # Friendly description to be shown in the UI instead of 'name' (Дружній опис буде показано в інтерфейсі користувача замість «імені»)
         description: "Person to greet (Привіт, як справи?)"
-        # Default value if no value is explicitly provided
+        # Default value if no value is explicitly provided (Типове значення, якщо явно не вказано значення)
         default: "World"
-        # Input has to be provided for the workflow to run
+        # Input has to be provided for the workflow to run (Вхід повинен бути наданий для робочого процесу для запуску)
         required: true
-        # The data type of the input
+        # The data type of the input (Тип даних вхідного сигналу)
         type: string
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel (Робочий процес складається з одного або декількох завдань, які можуть працювати послідовно або паралельно)
 jobs:
-  # This workflow contains a single job called "greet"
+  # This workflow contains a single job called "greet" (Цей робочий процес містить одну роботу під назвою «привітання» - "greet")
   greet:
-    # The type of runner that the job will run on
+    # The type of runner that the job will run on (Тип бігуна, на якому буде працювати робота)
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    # Steps represent a sequence of tasks that will be executed as part of the job (Кроки являють собою послідовність завдань, які будуть виконуватися як частина завдання)
     steps:
-      # Runs a single command using the runners shell
-      - name: Send greeting
+      # Runs a single command using the runners shell (Запускає одну команду за допомогою оболонки бігунів)
+      - name: Send greeting (Надіслати привітання)
         run: echo "Hello ${{ inputs.name }}"
