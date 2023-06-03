@@ -8,7 +8,7 @@ jobs:
   cypress-run:
     runs-on: ubuntu-22.04
     steps:
-      - name: Checkout
+      - name: Checkout (клонування коду репозиторію)
         uses: actions/checkout@v3
       - name: Install and run Cypress tests
         run: |
@@ -16,13 +16,17 @@ jobs:
 
           npx cypress run --spec "cypress\e2e\testovi_zaputu.spec.cy.js"
         #   npx cypress run --spec "e2e/**/*.spec.js"
-      - name: Cypress run
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner.(показує, що репозиторій ${{ github.repository }} був клонований на сервер)"
+        # Виконати команду "echo" для виведення повідомлення, яке показує, що репозиторій ${{ github.repository }} був клонований на сервер
+      - run: echo "🍏 (Вивести статус завдання) This job's status is ${{ job.status }}."
+        # Вивести статус завдання
+      - name: Cypress run(запускаємо тести)
         uses: cypress-io/github-action@v5
         with:
           start: npm start
-      - name: Create videos directory
+      - name: Create videos directory(створюємо папку для відео)
         run: mkdir -p cypress/videos
-      - name: Save Cypress videos on failure
+      - name: Save Cypress videos on failure ()
         if: ${{ failure() }}
         run: |
           mkdir -p videos
