@@ -12,6 +12,9 @@ jobs:
       # and run all Cypress tests (і запустити всі тести Cypress)
       - name: Cypress run
         uses: cypress-io/github-action@v5
-        with:
-          # build: npm run build
-          start: npm start
+
+        # with:
+        # build: npm run build
+        # start: npm start
+      - name: Запуск тестів Cypress (Run Cypress tests)
+        run: npx cypress run --spec "cypress/e2e/modul_4_hw.cy.js"
