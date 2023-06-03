@@ -20,3 +20,8 @@ jobs:
         # start: npm start
       - name: Запуск тестів Cypress (Run Cypress tests)
         run: npx cypress run --spec "cypress/e2e/modul_4_hw.cy.js"
+      - name: Save Cypress videos on failure
+        if: ${{ failure() }}
+        run: |
+          mkdir -p videos
+          mv cypress/videos/*.mp4 videos/
