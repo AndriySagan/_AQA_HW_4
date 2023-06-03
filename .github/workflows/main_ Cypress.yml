@@ -1,4 +1,4 @@
-name: Cypress Tests (Cypress GitHub Action) Тобто мій перший тест сайпреса та гіт хаба
+name: Тобто мій перший тест сайпреса та гіт хаба   Cypress Tests (Cypress GitHub Action)
 
 on: push
 

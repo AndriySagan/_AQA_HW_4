@@ -1,6 +1,6 @@
 # This is a basic workflow that is manually triggered(Це базовий робочий процес, який запускається вручну)
 
-name: Manual workflow1 (ТЕСТовий 1)
+name: (ТЕСТовий 1) Manual workflow1
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI (Керує, коли буде запущено дію. Робочий процес працює, коли вручну запускається за допомогою інтерфейсу користувача)
 # or API.

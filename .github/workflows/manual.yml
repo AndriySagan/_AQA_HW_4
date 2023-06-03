@@ -1,6 +1,6 @@
 # This is a basic workflow that is manually triggered
 
-name: Manual workflow2 (Приклад від гіт хабу)
+name: (Приклад від гіт хабу)  Manual workflow2
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.

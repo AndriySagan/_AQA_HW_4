@@ -1,7 +1,7 @@
-name: GitHub Actions Demo (назва яку я бачу)
+name: 🚀 GitHub Actions Demo (назва яку я бачу)
 # Назва цього GitHub Actions, який проводить демонстрацію
 
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀(${{ github.actor }} тестує дії GitHub методом пуш)
+run-name: 🚀(${{ github.actor }} тестує дії GitHub методом пуш) ${{ github.actor }} is testing out GitHub Actions
 # Ім'я користувача GitHub, який виконує тестування GitHub Actions
 
 on: [push]
