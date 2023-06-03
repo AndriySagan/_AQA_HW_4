@@ -49,6 +49,10 @@ jobs:
         uses: actions/checkout@v3
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
+      - name: Install and run Cypress tests (Встановити і запустити Cypress тести)
+        run: |
+          npm ci
+          npx cypress run
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
