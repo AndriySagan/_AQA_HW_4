@@ -54,3 +54,12 @@ jobs:
         with:
           # build: npm run build
           start: npm start
+      - name: Create videos directory
+        run: mkdir -p cypress/videos
+        # Створюємо папку для збереження відео (на випадок якщо її не існує)
+      - name: Save Cypress videos on failure
+        if: ${{ failure() }}
+        run: |
+          mkdir -p videos
+          mv cypress/videos/*.mp4 videos/
+        # Команда для збереження відео з помилками у вказану папку
