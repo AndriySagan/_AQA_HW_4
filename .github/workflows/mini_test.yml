@@ -13,6 +13,7 @@ jobs:
       - name: Install and run Cypress tests
         run: |
           node -v
+          npm ci
           npm -v
           npm init -y
           npm install cypress --save-dev
@@ -21,7 +22,7 @@ jobs:
 
           npx cypress run --browser chrome
         #   npx cypress run --spec "e2e/**/*.spec.js"
-        #   npm ci
+        #
       - run: echo "💡 .(показує, що репозиторій ${{ github.repository }} був клонований на сервер). The *** repository has been cloned to the runner"
         # Виконати команду "echo" для виведення повідомлення, яке показує, що репозиторій ${{ github.repository }} був клонований на сервер
       - run: echo "🍏 (Вивести статус завдання ${{ job.status }}) This job's status is ."
