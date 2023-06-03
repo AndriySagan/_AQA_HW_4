@@ -27,4 +27,3 @@ describe("#9 Запит методом GET на сайт https://tenders.guru/pl
     }
   });
 });
-// cypress\e2e\testovi_zaputu.spec.cy.js
