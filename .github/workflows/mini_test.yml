@@ -14,7 +14,7 @@ jobs:
         run: |
           npm ci
 
-          npx cypress run --spec "cypress\e2e\testovi_zaputu.spec.cy.js"
+          npx cypress run
         #   npx cypress run --spec "e2e/**/*.spec.js"
       - run: echo "💡 .(показує, що репозиторій ${{ github.repository }} був клонований на сервер). The *** repository has been cloned to the runner"
         # Виконати команду "echo" для виведення повідомлення, яке показує, що репозиторій ${{ github.repository }} був клонований на сервер
