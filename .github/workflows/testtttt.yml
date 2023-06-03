@@ -30,4 +30,4 @@ jobs:
     steps:
       # Runs a single command using the runners shell (Запускає одну команду за допомогою оболонки бігунів)
       - name: Send greeting (Надіслати привітання)
-        run: echo "Hello ${{ inputs.name }}"
+        run: echo "Hello ${{ inputs.name }} .. тут повинно бути (inputs.name)"
