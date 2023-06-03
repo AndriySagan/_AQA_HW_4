@@ -29,3 +29,9 @@ jobs:
           mkdir -p videos
           mv cypress/videos/*.mp4 videos/
         # Команда для збереження відео з помилками у вказану папку
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: Cypress Videos
+          path: cypress/videos
+          # Додаю команду для збереження відео та інших артефактів у GitHub Actions
