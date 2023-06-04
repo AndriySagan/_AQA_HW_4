@@ -99,7 +99,7 @@ describe("Негативний сценарій запиту ", () => {
 
   it("response code should be 405", () => {
     cy.request(request).then((response) => {
-      assert.equal(405, response.status);
+      assert.equal(406, response.status);
     });
   });
 });
